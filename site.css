@@ -23,6 +23,9 @@
   --aqua-br:   #a6dde0;
   --aqua-deep: #3f777a;
   --ember:     #d98a5b;   /* sparing warm accent */
+  --line-strong: rgba(255,255,255,0.16);
+  --surface-wash: rgba(255,255,255,0.02);
+  --nav-scrolled: rgba(7,9,10,0.78);
 
   --maxw: 1200px;
   --maxw-wide: 1340px;
@@ -32,6 +35,27 @@
   --font: "Hanken Grotesk", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --font-serif: "Newsreader", Georgia, serif;
+}
+
+/* Dark is the default. A visitor's explicit choice is stored on <html>. */
+html[data-theme="light"] {
+  --bg:        #f5f5f0;
+  --bg-2:      #eaeeea;
+  --panel:     #ffffff;
+  --card:      #ffffff;
+  --card-2:    #f0f5f3;
+  --line:      rgba(20,37,35,0.16);
+  --line-soft: rgba(20,37,35,0.10);
+  --line-strong: rgba(20,37,35,0.24);
+  --surface-wash: rgba(20,37,35,0.035);
+  --text:      #142523;
+  --dim:       #48605d;
+  --faint:     #5f716e;
+  --aqua:      #267276;
+  --aqua-br:   #1d5c60;
+  --aqua-deep: #3f777a;
+  --ember:     #a4532f;
+  --nav-scrolled: rgba(245,245,240,0.84);
 }
 
 * { box-sizing: border-box; }
@@ -86,8 +110,8 @@ a:focus-visible, button:focus-visible {
   font-family: var(--font-mono); font-weight: 500; font-size: 12px;
   letter-spacing: 0.16em; text-transform: uppercase; line-height: 1;
   color: var(--dim);
-  border: 1px solid rgba(255,255,255,0.16); border-radius: 999px;
-  padding: 8px 15px 8px 13px; background: rgba(255,255,255,0.02);
+  border: 1px solid var(--line-strong); border-radius: 999px;
+  padding: 8px 15px 8px 13px; background: var(--surface-wash);
 }
 .eyebrow::before {
   content:""; width: 7px; height: 7px; border-radius: 50%;
@@ -139,17 +163,17 @@ a:focus-visible, button:focus-visible {
   border-bottom: 1px solid transparent;
 }
 .nav.scrolled {
-  background: rgba(7,9,10,0.78); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  background: var(--nav-scrolled); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
   border-bottom-color: var(--line); padding: 13px 36px;
 }
 .nav__brand { display:flex; flex-direction: column; line-height: 1.05; }
-.nav__brand .a { font-weight: 800; font-size: 27px; letter-spacing: 0.0em; color: #fff; }
+.nav__brand .a { font-weight: 800; font-size: 27px; letter-spacing: 0.0em; color: var(--text); }
 .nav__brand .a b { color: var(--aqua); font-weight: 800; }
 .nav__brand .b { font-family: var(--font-mono); font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--faint); margin-top: 5px; white-space: nowrap; }
 .nav__links { display: flex; align-items: center; gap: 39px; }
 .nav__links a { font-family: var(--font-mono); font-weight: 500; font-size: 12.8px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--dim); position: relative; transition: color .25s var(--ease); white-space: nowrap; }
 .nav__links a::after { content:""; position:absolute; left:0; bottom:-7px; height:2px; width:0; background: var(--aqua); transition: width .3s var(--ease); }
-.nav__links a:hover, .nav__links a.active { color: #fff; }
+.nav__links a:hover, .nav__links a.active { color: var(--text); }
 .nav__links a.active::after, .nav__links a:hover::after { width: 100%; }
 .nav__cta {
   font-family: var(--font-mono); font-weight: 500; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
@@ -159,7 +183,17 @@ a:focus-visible, button:focus-visible {
 }
 .nav__cta:hover { transform: translateY(-2px); box-shadow: 0 12px 30px -10px rgba(132,194,198,.55); background: var(--aqua-br); }
 .nav__burger { display:none; background:none; border:0; cursor:pointer; padding:8px; }
-.nav__burger span { display:block; width:24px; height:2px; background:#fff; margin:5px 0; transition:.3s var(--ease); border-radius:2px; }
+.nav__burger span { display:block; width:24px; height:2px; background:var(--text); margin:5px 0; transition:.3s var(--ease); border-radius:2px; }
+
+.theme-toggle {
+  display:inline-flex; align-items:center; justify-content:center; gap:7px;
+  min-width:42px; height:42px; padding:0 12px; border:1px solid var(--line);
+  border-radius:999px; background:var(--surface-wash); color:var(--dim); cursor:pointer;
+  font-family:var(--font-mono); font-size:11px; font-weight:600; letter-spacing:.09em;
+  text-transform:uppercase; transition:color .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
+}
+.theme-toggle:hover { color:var(--text); background:var(--card); border-color:var(--aqua); transform:translateY(-1px); }
+.theme-toggle svg { width:16px; height:16px; flex:none; }
 .nav.open .nav__burger span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
 .nav.open .nav__burger span:nth-child(2){ opacity:0; }
 .nav.open .nav__burger span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
@@ -244,7 +278,7 @@ a:focus-visible, button:focus-visible {
   .nav__links { display:none; }
   .nav.open .nav__links {
     display:flex; flex-direction:column; align-items:flex-start; gap:22px;
-    position:absolute; top:100%; left:0; right:0; background: rgba(7,9,10,.98);
+    position:absolute; top:100%; left:0; right:0; background: var(--bg);
     padding: 28px 36px 34px; border-bottom: 1px solid var(--line);
   }
   .nav__burger { display:block; }
@@ -254,6 +288,7 @@ a:focus-visible, button:focus-visible {
   /* the "Begin a conversation" pill cannot fit beside the brand on small
      screens — the same action lives in every page hero and CTA band */
   .nav__cta { display: none; }
+  .theme-toggle { margin-left:auto; }
 }
 @media (max-width: 600px){
   body { font-size: 17px; }
