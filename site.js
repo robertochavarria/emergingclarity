@@ -115,7 +115,7 @@
           "</div>" +
           '<div class="footer__legal">' +
             "<span>© " + new Date().getFullYear() + " Emerging Clarity · Roberto Chavarria</span>" +
-            "<span>Coaching &amp; mentoring — not a substitute for clinical care.</span>" +
+
           "</div>" +
         "</div>" +
       "</footer>";
