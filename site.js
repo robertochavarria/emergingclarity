@@ -16,9 +16,9 @@
   function applyTheme(theme) {
     root.setAttribute("data-theme", theme);
     var themeMeta = document.querySelector('meta[name="theme-color"]');
-    if (themeMeta) themeMeta.setAttribute("content", theme === "light" ? "#f5f5f0" : "#07090a");
+    if (themeMeta) themeMeta.setAttribute("content", theme === "dark" ? "#07090a" : "#f5f5f0");
   }
-  applyTheme(savedTheme() === "light" ? "light" : "dark");
+  applyTheme(savedTheme() === "dark" ? "dark" : "light");
 
   var LINKS = [
     { href: "about.html",        id: "about",        label: "About Roberto" },
@@ -55,8 +55,8 @@
           '<span class="b">Life Threshold Coaching</span>' +
         "</a>" +
         '<nav class="nav__links" aria-label="Primary">' + linksHtml + "</nav>" +
-        '<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode"></button>' +
         '<a class="nav__cta" href="connect.html">Begin a conversation</a>' +
+        '<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"></button>' +
         '<button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>' +
       "</header>";
   }
@@ -70,7 +70,7 @@
     var icon = isLight
       ? '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.6 15.8A8.6 8.6 0 0 1 8.2 3.4 8.6 8.6 0 1 0 20.6 15.8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>'
       : '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.2M12 19.8V22M2 12h2.2M19.8 12H22M4.9 4.9l1.55 1.55M17.55 17.55l1.55 1.55M19.1 4.9l-1.55 1.55M6.45 17.55L4.9 19.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
-    themeToggle.innerHTML = icon + '<span>' + nextLabel + "</span>";
+    themeToggle.innerHTML = icon;
     themeToggle.setAttribute("aria-label", "Switch to " + nextLabel + " mode");
     themeToggle.setAttribute("title", "Switch to " + nextLabel + " mode");
   }

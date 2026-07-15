@@ -7,26 +7,27 @@
 /* Fonts are loaded via a single <link> in each page <head> — no @import (which would block rendering). */
 
 :root {
-  --bg:        #07090a;
-  --bg-2:      #0a0e0f;
-  --panel:     #0d1213;
-  --card:      #0f1516;
-  --card-2:    #121a1b;
-  --line:      rgba(255,255,255,0.10);
-  --line-soft: rgba(255,255,255,0.06);
+  --bg:        #f5f5f0;
+  --bg-2:      #eaeeea;
+  --panel:     #ffffff;
+  --card:      #ffffff;
+  --card-2:    #f0f5f3;
+  --line:      rgba(20,37,35,0.16);
+  --line-soft: rgba(20,37,35,0.10);
 
-  --text:      #eceae3;
-  --dim:       #9aa3a2;
-  --faint:     #7d8887;  /* ≥4.5:1 on --bg for small labels */
+  --text:      #142523;
+  --dim:       #48605d;
+  --faint:     #5f716e;
 
-  --aqua:      #84c2c6;   /* signature turquoise */
-  --aqua-br:   #a6dde0;
+  --aqua:      #267276;
+  --aqua-br:   #1d5c60;
   --aqua-deep: #3f777a;
-  --on-aqua:   #06181a;
-  --ember:     #d98a5b;   /* sparing warm accent */
-  --line-strong: rgba(255,255,255,0.16);
-  --surface-wash: rgba(255,255,255,0.02);
-  --nav-scrolled: rgba(7,9,10,0.78);
+  --on-aqua:   #ffffff;
+  --quote-text:#142523;
+  --ember:     #a4532f;
+  --line-strong: rgba(20,37,35,0.24);
+  --surface-wash: rgba(20,37,35,0.035);
+  --nav-scrolled: rgba(245,245,240,0.84);
 
   --maxw: 1200px;
   --maxw-wide: 1340px;
@@ -38,26 +39,27 @@
   --font-serif: "Newsreader", Georgia, serif;
 }
 
-/* Dark is the default. A visitor's explicit choice is stored on <html>. */
-html[data-theme="light"] {
-  --bg:        #f5f5f0;
-  --bg-2:      #eaeeea;
-  --panel:     #ffffff;
-  --card:      #ffffff;
-  --card-2:    #f0f5f3;
-  --line:      rgba(20,37,35,0.16);
-  --line-soft: rgba(20,37,35,0.10);
-  --line-strong: rgba(20,37,35,0.24);
-  --surface-wash: rgba(20,37,35,0.035);
-  --text:      #142523;
-  --dim:       #48605d;
-  --faint:     #5f716e;
-  --aqua:      #267276;
-  --aqua-br:   #1d5c60;
+/* Light is the default. A visitor's explicit dark choice is stored on <html>. */
+html[data-theme="dark"] {
+  --bg:        #07090a;
+  --bg-2:      #0a0e0f;
+  --panel:     #0d1213;
+  --card:      #0f1516;
+  --card-2:    #121a1b;
+  --line:      rgba(255,255,255,0.10);
+  --line-soft: rgba(255,255,255,0.06);
+  --line-strong: rgba(255,255,255,0.16);
+  --surface-wash: rgba(255,255,255,0.02);
+  --text:      #eceae3;
+  --dim:       #9aa3a2;
+  --faint:     #7d8887;
+  --aqua:      #84c2c6;
+  --aqua-br:   #a6dde0;
   --aqua-deep: #3f777a;
-  --on-aqua:   #ffffff;
-  --ember:     #a4532f;
-  --nav-scrolled: rgba(245,245,240,0.84);
+  --on-aqua:   #06181a;
+  --quote-text:#eaf6f7;
+  --ember:     #d98a5b;
+  --nav-scrolled: rgba(7,9,10,0.78);
 }
 
 * { box-sizing: border-box; }
@@ -188,14 +190,13 @@ a:focus-visible, button:focus-visible {
 .nav__burger span { display:block; width:24px; height:2px; background:var(--text); margin:5px 0; transition:.3s var(--ease); border-radius:2px; }
 
 .theme-toggle {
-  display:inline-flex; align-items:center; justify-content:center; gap:7px;
-  min-width:42px; height:42px; padding:0 12px; border:1px solid var(--line);
+  display:inline-flex; align-items:center; justify-content:center;
+  width:34px; height:34px; padding:0; margin-left:-16px; border:1px solid var(--line);
   border-radius:999px; background:var(--surface-wash); color:var(--dim); cursor:pointer;
-  font-family:var(--font-mono); font-size:11px; font-weight:600; letter-spacing:.09em;
-  text-transform:uppercase; transition:color .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
+  transition:color .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
 }
 .theme-toggle:hover { color:var(--text); background:var(--card); border-color:var(--aqua); transform:translateY(-1px); }
-.theme-toggle svg { width:16px; height:16px; flex:none; }
+.theme-toggle svg { width:15px; height:15px; flex:none; }
 .nav.open .nav__burger span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
 .nav.open .nav__burger span:nth-child(2){ opacity:0; }
 .nav.open .nav__burger span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
