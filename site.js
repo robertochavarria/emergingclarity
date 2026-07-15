@@ -21,10 +21,10 @@
   applyTheme(savedTheme() === "dark" ? "dark" : "light");
 
   var LINKS = [
-    { href: "about.html",        id: "about",        label: "About Roberto" },
-    { href: "work.html",         id: "work",         label: "Our Work Together" },
-    { href: "testimonials.html", id: "testimonials", label: "Stories" },
-    { href: "connect.html",      id: "connect",      label: "Connect" }
+    { href: "/about/",        id: "about",        label: "About Roberto" },
+    { href: "/work/",         id: "work",         label: "Our Work Together" },
+    { href: "/testimonials/", id: "testimonials", label: "Stories" },
+    { href: "/connect/",      id: "connect",      label: "Connect" }
   ];
 
   /* ---------- Skip-to-content ---------- */
@@ -50,12 +50,12 @@
     }).join("");
     navHost.outerHTML =
       '<header class="nav" id="nav">' +
-        '<a class="nav__brand" href="index.html" aria-label="Emerging Clarity home">' +
+        '<a class="nav__brand" href="/home/" aria-label="Emerging Clarity home">' +
           '<span class="a">Emerging <b>Clarity</b></span>' +
           '<span class="b">Life Threshold Coaching</span>' +
         "</a>" +
         '<nav class="nav__links" aria-label="Primary">' + linksHtml + "</nav>" +
-        '<a class="nav__cta" href="connect.html">Begin a conversation</a>' +
+        '<a class="nav__cta" href="/connect/">Begin a conversation</a>' +
         '<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"></button>' +
         '<button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>' +
       "</header>";
@@ -101,14 +101,14 @@
             "</div>" +
             '<div class="footer__col">' +
               "<h4>Explore</h4>" +
-              '<a href="about.html">About Roberto</a>' +
-              '<a href="work.html">Our Work Together</a>' +
-              '<a href="testimonials.html">Stories</a>' +
-              '<a href="connect.html">Connect</a>' +
+              '<a href="/about/">About Roberto</a>' +
+              '<a href="/work/">Our Work Together</a>' +
+              '<a href="/testimonials/">Stories</a>' +
+              '<a href="/connect/">Connect</a>' +
             "</div>" +
             '<div class="footer__col">' +
               "<h4>Begin</h4>" +
-              '<a href="connect.html">Book an exploration call</a>' +
+              '<a href="/connect/">Book an exploration call</a>' +
               '<a href="mailto:hello@emergingclarity.com">hello@emergingclarity.com</a>' +
               '<span>Sessions held online, worldwide</span>' +
             "</div>" +
