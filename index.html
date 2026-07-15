@@ -61,8 +61,10 @@
   @media (prefers-reduced-motion: reduce){
     .hero__line { animation: none; transform: translateX(-50%) scaleY(1); }
   }
-  .hero__inner { position: relative; max-width: 1040px; }
-  .hero h1 { font-size: clamp(40px, 5.8vw, 84px); line-height: 1.05; letter-spacing: -0.035em; max-width: 22ch; color: #fff; text-wrap: balance; }
+  .hero__inner { position: relative; max-width: 1240px; display:grid; grid-template-columns: 1fr 400px; gap: 64px; align-items:center; }
+  .hero__photo img { width:100%; height:auto; display:block; border-radius: var(--radius-lg); box-shadow: inset 0 0 0 1px var(--line), 0 30px 70px -40px rgba(0,0,0,.7); }
+  @media (max-width: 900px){ .hero__inner { grid-template-columns: 1fr; gap: 44px; } .hero__photo { max-width: 340px; } }
+  .hero h1 { font-size: clamp(34px, 4.4vw, 62px); line-height: 1.05; letter-spacing: -0.035em; max-width: 22ch; color: #fff; text-wrap: balance; }
 
   /* ---- Revolving phrase ---- */
   .revolver {
@@ -273,23 +275,30 @@
     <div class="glow" aria-hidden="true"></div>
     <div class="hero__line" aria-hidden="true"></div>
     <div class="wrap hero__inner">
-      <div class="eyebrow reveal in">For those standing at a <span class="hot">threshold</span></div>
+     <div class="hero__text">
+      <div class="eyebrow reveal in">1-ON-1 COACHING FOR LIFE THAT IS <span class="hot">EMERGING</span></div>
       <h1 class="reveal in" data-d="1" style="margin-top:22px">
-        The old life you built still works.<br />
-        But it no longer feels true.
+        <span style="display:block">Trust what you know more deeply<em style="color:var(--aqua)">.</em></span>
+        <span style="display:block;margin-top:.28em"><em style="color:var(--aqua)">Live more freely<br />from it</em>.</span>
       </h1>
       <div class="hero__sub reveal in" data-d="2">
-        <p>The life you built can keep functioning long after it has stopped being true. The calendar still fills. The bills still get paid.</p>
-        <p>But underneath, the old answers have begun to lose their authority. <span class="aqua">Something in you knows: the old way is no longer the way.</span></p>
-        <p>This is <span class="aqua">one-on-one coaching</span> for the passage between <span class="aqua">who you have been and who you are becoming</span>.</p>
+        <p>There are times when the whole path is not clear, but something in you has already begun to move. Beneath fear, expectation, and the pressure to have it all figured out, there may be a quieter direction asking for your trust.</p>
+        <p>Through <span class="aqua">soulful one-on-one coaching</span>, we make space to listen for that direction—and translate it into real movement: the conversations, choices, boundaries, and experiments that let your life become more your own.</p>
       </div>
       <div class="hero__ctas reveal in" data-d="3">
         <a class="btn btn--aqua" href="connect.html">Begin with a conversation
           <svg width="17" height="12" viewBox="0 0 18 12" fill="none"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a class="tlink" href="work.html">Read the approach
+        <a class="tlink" href="about.html">Learn about Roberto
           <svg width="17" height="12" viewBox="0 0 18 12" fill="none"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
+      </div>
+     </div>
+      <div class="hero__photo reveal in" data-d="2">
+        <picture>
+          <source srcset="assets/roberto-environment.webp" type="image/webp" />
+          <img src="assets/roberto-environment.jpg" alt="Roberto Chavarria" width="1200" height="1800" loading="eager" decoding="async" fetchpriority="high" />
+        </picture>
       </div>
     </div>
     <a class="hero__scroll" href="#threshold" aria-label="Scroll"><span class="m" aria-hidden="true"></span>Scroll</a>

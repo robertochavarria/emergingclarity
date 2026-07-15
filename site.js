@@ -9,8 +9,8 @@
   var PAGE = document.body.getAttribute("data-page") || "";
 
   var LINKS = [
-    { href: "about.html",        id: "about",        label: "About Me" },
-    { href: "work.html",         id: "work",         label: "The Work" },
+    { href: "about.html",        id: "about",        label: "About Roberto" },
+    { href: "work.html",         id: "work",         label: "Our Work Together" },
     { href: "testimonials.html", id: "testimonials", label: "Stories" },
     { href: "connect.html",      id: "connect",      label: "Connect" }
   ];
@@ -65,8 +65,8 @@
             "</div>" +
             '<div class="footer__col">' +
               "<h4>Explore</h4>" +
-              '<a href="about.html">About Me</a>' +
-              '<a href="work.html">The Work</a>' +
+              '<a href="about.html">About Roberto</a>' +
+              '<a href="work.html">Our Work Together</a>' +
               '<a href="testimonials.html">Stories</a>' +
               '<a href="connect.html">Connect</a>' +
             "</div>" +
