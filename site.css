@@ -280,10 +280,11 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 940px){
   .nav__links { display:none; }
   .nav.open .nav__links {
-    display:flex; flex-direction:column; align-items:flex-start; gap:22px;
+    display:flex; flex-direction:column; align-items:flex-start; gap:4px;
     position:absolute; top:100%; left:0; right:0; background: var(--bg);
     padding: 28px 36px 34px; border-bottom: 1px solid var(--line);
   }
+  .nav.open .nav__links a { padding:12px 0; min-height:44px; display:flex; align-items:center; }
   .nav__burger { display:block; }
   .footer__top { grid-template-columns: 1fr 1fr; gap: 40px; }
 }
@@ -302,4 +303,23 @@ a:focus-visible, button:focus-visible {
   .nav__brand .b { font-size: 12px; }
   .footer__top { grid-template-columns: 1fr; }
   .card { padding: 26px; }
+  /* Preserve the compact icon appearance while giving touch controls a reliable hit area. */
+  .theme-toggle { width:44px; height:44px; min-width:44px; }
+  .footer__col a { min-height:40px; display:flex; align-items:center; margin-bottom:2px; }
+  .tlink { min-height:44px; display:inline-flex; align-items:center; }
+  .quote .who-more { min-height:44px; display:inline-flex; align-items:center; }
+  .footer__practice { min-height:40px; display:inline-flex; align-items:center; }
+}
+@media (max-width: 360px){
+  .nav { padding:12px 14px; gap:8px; }
+  .nav.scrolled { padding:10px 14px; }
+  .nav__brand .a { font-size:20px; }
+  .nav__brand .b { font-size:10px; letter-spacing:.13em; }
+  .theme-toggle { width:40px; height:40px; min-width:40px; }
+  /* A forced no-wrap hero phrase would otherwise create horizontal scrolling on 320px devices. */
+  .hero__text { min-width:0; }
+  .hero h1 em[style*="white-space"] { white-space:normal !important; }
+  .quotes, .quote { min-width:0; }
+  .quote .who { flex-wrap:wrap; }
+  .quote .who-more { width:100%; margin-left:0; white-space:normal; }
 }
