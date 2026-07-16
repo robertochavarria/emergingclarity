@@ -48,21 +48,7 @@
 <style>
   /* ---- Home-only ---- */
   .hero { position: relative; min-height: 100svh; display: flex; align-items: center; padding: 120px 0 80px; overflow: hidden; }
-  .hero__line {
-    position:absolute; left:50%; top:0; width:1px; height:120px;
-    background: linear-gradient(180deg, transparent, var(--line));
-    transform: translateX(-50%) scaleY(0);
-    transform-origin: 50% 0%;
-    animation: thresholdDrop 1.6s cubic-bezier(.22,.61,.36,1) 0.2s forwards;
-  }
-  @keyframes thresholdDrop {
-    0%   { transform: translateX(-50%) scaleY(0);    opacity: 0; }
-    20%  { opacity: 1; }
-    100% { transform: translateX(-50%) scaleY(1);    opacity: 1; }
-  }
-  @media (prefers-reduced-motion: reduce){
-    .hero__line { animation: none; transform: translateX(-50%) scaleY(1); }
-  }
+
   .hero__inner { position: relative; max-width: 1240px; display:grid; grid-template-columns: 1fr 400px; gap: 64px; align-items:center; }
   .hero__photo img { width:100%; height:auto; display:block; border-radius: var(--radius-lg); box-shadow: inset 0 0 0 1px var(--line), 0 30px 70px -40px rgba(0,0,0,.7); }
   @media (max-width: 900px){ .hero__inner { grid-template-columns: 1fr; gap: 44px; } .hero__photo { max-width: 340px; } }
@@ -277,7 +263,7 @@
   <!-- HERO -->
   <section class="hero" data-screen-label="Hero">
     <div class="glow" aria-hidden="true"></div>
-    <div class="hero__line" aria-hidden="true"></div>
+
     <div class="wrap hero__inner">
      <div class="hero__text">
       <div class="eyebrow reveal in">AN INVITATION INTO DEEPER SELF-HONESTY &amp; CLARITY</div>
