@@ -93,7 +93,7 @@
           '<div class="footer__top">' +
             '<div class="footer__brand">' +
               '<span class="a">Emerging <b>Clarity</b></span>' +
-              "<p>Soulful mentoring for those standing at a threshold.</p>" +
+              "<p>Build a life increasingly shaped by what you most deeply know.</p>" +
               '<a class="footer__practice" href="https://robertochavarria.com" target="_blank" rel="noopener">A practice of Roberto Chavarria <span aria-hidden="true">&#8599;</span></a>' +
               '<div class="footer__social">' +
                 '<a href="mailto:hello@emergingclarity.com" aria-label="Email"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2"/></svg></a>' +
