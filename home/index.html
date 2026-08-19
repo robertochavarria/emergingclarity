@@ -49,10 +49,43 @@
   /* ---- Home-only ---- */
   .hero { position: relative; min-height: 100svh; display: flex; align-items: center; padding: 120px 0 80px; overflow: hidden; }
 
-  .hero__inner { position: relative; max-width: 1380px; display:grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 350px); gap: clamp(36px, 3.5vw, 56px); align-items:center; }
+  .hero__inner {
+    position: relative;
+    max-width: 1380px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 350px);
+    grid-template-areas:
+      "text problem"
+      "text photo";
+    column-gap: clamp(36px, 3.5vw, 56px);
+    row-gap: 22px;
+    align-items: start;
+  }
+  .hero__text { grid-area: text; min-width: 0; }
+  .hero__photo { grid-area: photo; }
   .hero__photo img { width:100%; height:auto; display:block; border-radius: var(--radius-lg); box-shadow: inset 0 0 0 1px var(--line), 0 30px 70px -40px rgba(0,0,0,.7); }
-  @media (max-width: 900px){ .hero__inner { grid-template-columns: 1fr; gap: 44px; } .hero__photo { max-width: 340px; } }
-  .hero__problem { margin: 0 0 22px; max-width: 58ch; color: var(--dim); font-size: clamp(17px, 1.45vw, 20px); line-height: 1.55; }
+  .hero__problem {
+    grid-area: problem;
+    margin: 0;
+    max-width: 32ch;
+    padding: 2px 0 2px 18px;
+    border-left: 2px solid var(--aqua);
+    color: var(--dim);
+    font-size: clamp(16px, 1.25vw, 18px);
+    line-height: 1.55;
+  }
+  @media (max-width: 900px){
+    .hero__inner {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "problem"
+        "text"
+        "photo";
+      gap: 34px;
+    }
+    .hero__problem { max-width: 44ch; }
+    .hero__photo { max-width: 340px; }
+  }
   .hero h1 { font-size: clamp(34px, 3.6vw, 56px); line-height: 1.05; letter-spacing: -0.035em; max-width: none; color: var(--text); }
   .hero__statement { display: block; text-wrap: balance; }
   .hero__statement + .hero__statement { margin-top: .28em; }
@@ -271,6 +304,8 @@
   @media (max-width: 600px){
     .quotes { grid-template-columns: 1fr; }
     .stands, .threshes { grid-template-columns: 1fr; }
+    .longarc .tlink { max-width: 100%; white-space: normal; align-items: flex-start; }
+    .longarc .tlink svg { flex: none; margin-top: 4px; }
   }
 </style>
 </head>
@@ -285,8 +320,8 @@
     <div class="glow" aria-hidden="true"></div>
 
     <div class="wrap hero__inner">
+     <p class="hero__problem reveal in">You know something in your life has to change, but you still can’t see the way forward.</p>
      <div class="hero__text">
-      <p class="hero__problem reveal in">You know something in your life has to change, but you still can’t see the way forward.</p>
       <h1 class="reveal in" data-d="1">
         <span class="hero__statement">Make sense of what is stirring within you.</span>
         <span class="hero__statement"><em style="color:var(--aqua)">Live more freely from what you most deeply know.</em></span>
@@ -319,7 +354,7 @@
   <section class="section section--panel" id="threshold" data-screen-label="What a threshold feels like">
     <div class="wrap wrap-wide">
       <div class="section__head reveal">
-        <div class="eyebrow">The threshold</div>
+        <div class="eyebrow">You may be at a threshold</div>
         <h2 class="section__title">It often starts as a quiet inability to keep pretending.</h2>
         <div class="section__intro">
           <p>A threshold is not always dramatic. Sometimes it feels like numbness. Sometimes like restlessness. Sometimes like dread before opening your laptop, or like you&rsquo;re keeping a zombie version of yourself alive at work. Sometimes like looking at your marriage, your career, your faith, your calendar, your body, your future, and <span class="aqua">sensing that a deeper honesty is being asked of you</span>.</p>
