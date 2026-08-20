@@ -96,49 +96,52 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top: 30px" data-screen-label="Begin the conversation">
-    <div class="wrap">
-      <div class="connectcopy reveal">
-        <p style="font-size:21px; color:var(--text); line-height:1.5">The best way to understand this work is to experience it. Write me a note — as much or as little as you like — and we&rsquo;ll find a time for a free, relaxed one-hour video call.</p>
-        <div class="step"><span class="n">1</span><span class="t">We get a feel for each other — no pressure, just listening for whether this is right.</span></div>
-        <div class="step"><span class="n">2</span><span class="t">I&rsquo;ll share exactly what to expect from our work, what it costs, and how to begin.</span></div>
-        <div class="step"><span class="n">3</span><span class="t">You leave with clarity on your next step — whether or not it&rsquo;s with me.</span></div>
-        <div class="actions">
-          <a class="btn btn--aqua" href="mailto:hello@emergingclarity.com?subject=Exploration%20call">Write me an email
-            <svg width="17" height="12" viewBox="0 0 18 12" fill="none"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-        <p class="after">I read every note myself, and I&rsquo;ll reply personally so we can find a time that works.</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section section--panel" id="book" style="padding-top:70px" data-screen-label="Book a session">
     <div class="wrap">
       <div class="cal-booking reveal">
         <div class="cal-booking__head">
           <div class="eyebrow center">Choose a time</div>
           <h2>Book your free exploration session.</h2>
-          <p>Select a time that works for you. If you would rather begin by writing, the email option above is always available.</p>
+          <p>Select a time that works for you. If you would rather begin by writing, the email option below is always available.</p>
         </div>
         <div class="cal-embed-shell">
           <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-exploration-session">
-            <p class="cal-embed-fallback">Loading the calendar&hellip; <a href="https://cal.com/clawmentor-ai/exploration-session">Open the booking page directly</a>.</p>
+            <p class="cal-embed-fallback">Loading the calendar&hellip; <a href="https://cal.com/robertochavarria/session">Open the booking page directly</a>.</p>
           </div>
         </div>
         <script type="text/javascript">
           (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
           Cal("init", "exploration-session", {origin:"https://app.cal.com"});
+          Cal.config = Cal.config || {};
+          Cal.config.forwardQueryParams = false;
           Cal.ns["exploration-session"]("inline", {
             elementOrSelector:"#my-cal-inline-exploration-session",
             config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-            calLink: "clawmentor-ai/exploration-session"
+            calLink: "robertochavarria/session"
           });
           Cal.ns["exploration-session"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
         </script>
       </div>
     </div>
   </section>
+
+  <section class="section" style="padding-top: 30px" data-screen-label="Begin the conversation">
+    <div class="wrap">
+      <div class="connectcopy reveal">
+        <p style="font-size:21px; color:var(--text); line-height:1.5">If you would rather begin by writing, send me a note — as much or as little as you like — and I&rsquo;ll reply personally.</p>
+        <div class="step"><span class="n">1</span><span class="t">We get a feel for each other — no pressure, just listening for whether this is right.</span></div>
+        <div class="step"><span class="n">2</span><span class="t">I&rsquo;ll share exactly what to expect from our work, what it costs, and how to begin.</span></div>
+        <div class="step"><span class="n">3</span><span class="t">You leave with clarity on your next step — whether or not it&rsquo;s with me.</span></div>
+        <div class="actions">
+          <a class="btn btn--aqua" href="mailto:hello@emergingclarity.com?subject=Exploration%20call">Write me instead
+            <svg width="17" height="12" viewBox="0 0 18 12" fill="none"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <p class="after">I read every note myself, and I&rsquo;ll reply personally.</p>
+      </div>
+    </div>
+  </section>
+
 
   <section class="section section--panel" id="faq" style="scroll-margin-top: 100px" data-screen-label="FAQ">
     <div class="wrap">
