@@ -55,7 +55,7 @@
           '<span class="b">Life Threshold Coaching</span>' +
         "</a>" +
         '<nav class="nav__links" aria-label="Primary">' + linksHtml + "</nav>" +
-        '<a class="nav__cta" href="/connect/">Book a free session</a>' +
+        '<a class="nav__cta" href="/connect/#book">Book a free session</a>' +
         '<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"></button>' +
         '<button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>' +
       "</header>";
@@ -108,7 +108,7 @@
             "</div>" +
             '<div class="footer__col">' +
               "<h4>Begin</h4>" +
-              '<a href="/connect/">Book a free first session</a>' +
+              '<a href="/connect/#book">Book a free first session</a>' +
               '<a href="mailto:hello@emergingclarity.com">hello@emergingclarity.com</a>' +
               '<span>Sessions held online, worldwide</span>' +
             "</div>" +

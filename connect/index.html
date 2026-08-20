@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script>(function(){try{if(localStorage.getItem("emerging-clarity-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}})();</script>
 <title>Connect — Emerging Clarity</title>
-<meta name="description" content="Book a free first session with Roberto Chavarria — a relaxed 45-minute conversation to experience the work for yourself." />
+<meta name="description" content="Book a free first session with Roberto Chavarria — a relaxed one-hour conversation to experience the work for yourself." />
 <meta name="theme-color" content="#f5f5f0" />
 <link rel="canonical" href="https://emergingclarity.com/connect/" />
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -46,6 +46,27 @@
   .connectcopy .actions { display:flex; gap:14px; flex-wrap:wrap; margin-top: 30px; }
   .connectcopy .after { color: var(--faint); font-size: 15px; margin: 18px 0 0; }
 
+  #book { scroll-margin-top: 82px; }
+  .cal-booking { max-width: 980px; margin: 0 auto; }
+  .cal-booking__head { max-width: 680px; margin: 0 auto 34px; text-align: center; }
+  .cal-booking__head h2 { font-size: clamp(30px, 4vw, 48px); margin-top: 18px; }
+  .cal-booking__head p { margin-top: 16px; color: var(--dim); font-size: 18px; }
+  .cal-embed-shell {
+    width: 100%;
+    height: min(780px, calc(100svh - 110px));
+    min-height: 660px;
+    overflow: hidden;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+  }
+  .cal-embed-fallback { padding: 28px; color: var(--dim); text-align: center; }
+  .cal-embed-fallback a { color: var(--aqua); text-decoration: underline; }
+  #my-cal-inline-exploration-session:has(iframe) > .cal-embed-fallback { display: none; }
+  @media (max-width: 600px) {
+    .cal-embed-shell { height: 720px; min-height: 720px; border-radius: var(--radius-md); }
+  }
+
   /* FAQ — hairline-divided question/answer stack */
   .faq { max-width: 720px; margin: 40px auto 0; border-top: 1px solid var(--line); }
   .faq-item { padding: 26px 6px; border-bottom: 1px solid var(--line); }
@@ -78,7 +99,7 @@
   <section class="section" style="padding-top: 30px" data-screen-label="Begin the conversation">
     <div class="wrap">
       <div class="connectcopy reveal">
-        <p style="font-size:21px; color:var(--text); line-height:1.5">The best way to understand this work is to experience it. Write me a note — as much or as little as you like — and we&rsquo;ll find a time for a free, relaxed 45-minute video call.</p>
+        <p style="font-size:21px; color:var(--text); line-height:1.5">The best way to understand this work is to experience it. Write me a note — as much or as little as you like — and we&rsquo;ll find a time for a free, relaxed one-hour video call.</p>
         <div class="step"><span class="n">1</span><span class="t">We get a feel for each other — no pressure, just listening for whether this is right.</span></div>
         <div class="step"><span class="n">2</span><span class="t">I&rsquo;ll share exactly what to expect from our work, what it costs, and how to begin.</span></div>
         <div class="step"><span class="n">3</span><span class="t">You leave with clarity on your next step — whether or not it&rsquo;s with me.</span></div>
@@ -92,6 +113,35 @@
     </div>
   </section>
 
+  <section class="section section--panel" id="book" style="padding-top:70px" data-screen-label="Book a session">
+    <div class="wrap">
+      <div class="cal-booking reveal">
+        <div class="cal-booking__head">
+          <div class="eyebrow center">Choose a time</div>
+          <h2>Book your free first session.</h2>
+          <p>Select a time that works for you. If you would rather begin by writing, the email option above is always available.</p>
+        </div>
+        <div class="cal-embed-shell">
+          <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-exploration-session">
+            <p class="cal-embed-fallback">Loading the calendar&hellip; <a href="https://cal.com/clawmentor-ai/exploration-session">Open the booking page directly</a>.</p>
+          </div>
+        </div>
+        <script type="text/javascript">
+          (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+          Cal("init", "exploration-session", {origin:"https://app.cal.com"});
+          Cal.config = Cal.config || {};
+          Cal.config.forwardQueryParams = true;
+          Cal.ns["exploration-session"]("inline", {
+            elementOrSelector:"#my-cal-inline-exploration-session",
+            config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+            calLink: "clawmentor-ai/exploration-session"
+          });
+          Cal.ns["exploration-session"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        </script>
+      </div>
+    </div>
+  </section>
+
   <section class="section section--panel" id="faq" style="scroll-margin-top: 100px" data-screen-label="FAQ">
     <div class="wrap">
       <div class="section__head center reveal" style="margin-bottom: 10px">
@@ -101,7 +151,7 @@
       <div class="faq reveal">
         <div class="faq-item">
           <div class="faq-q">What is the free first session?</div>
-          <p class="faq-a">A relaxed 45-minute video call. We talk about where you are, what is bringing you here, and what you are hoping for — and we listen together for whether this work fits the threshold you are in. You will get a real taste of how I listen and reflect.</p>
+          <p class="faq-a">A relaxed one-hour video call. We talk about where you are, what is bringing you here, and what you are hoping for — and we listen together for whether this work fits the threshold you are in. You will get a real taste of how I listen and reflect.</p>
         </div>
         <div class="faq-item">
           <div class="faq-q">Do I need to be in a crisis to come?</div>
@@ -137,6 +187,6 @@
 </main>
 
 <div id="site-footer"></div>
-<script src="site.js?v=10"></script>
+<script src="site.js?v=11"></script>
 </body>
 </html>
