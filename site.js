@@ -114,7 +114,7 @@
             "</div>" +
           "</div>" +
           '<div class="footer__legal">' +
-            "<span>© " + new Date().getFullYear() + " Emerging Clarity · Roberto Chavarria</span>" +
+            "<span>© " + new Date().getFullYear() + " Essence Into Form LLC · Emerging Clarity</span>" +
 
           "</div>" +
         "</div>" +
