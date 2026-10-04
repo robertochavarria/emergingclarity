@@ -7,27 +7,27 @@
 /* Fonts are loaded via a single <link> in each page <head> — no @import (which would block rendering). */
 
 :root {
-  --bg:        #f5f5f0;
-  --bg-2:      #eaeeea;
-  --panel:     #ffffff;
-  --card:      #ffffff;
-  --card-2:    #f0f5f3;
-  --line:      rgba(20,37,35,0.16);
-  --line-soft: rgba(20,37,35,0.10);
+  --bg:        #07090a;
+  --bg-2:      #0a0e0f;
+  --panel:     #0d1213;
+  --card:      #0f1516;
+  --card-2:    #121a1b;
+  --line:      rgba(255,255,255,0.10);
+  --line-soft: rgba(255,255,255,0.06);
 
-  --text:      #142523;
-  --dim:       #48605d;
-  --faint:     #5f716e;
+  --text:      #eceae3;
+  --dim:       #9aa3a2;
+  --faint:     #7d8887;
 
-  --aqua:      #267276;
-  --aqua-br:   #1d5c60;
+  --aqua:      #84c2c6;
+  --aqua-br:   #a6dde0;
   --aqua-deep: #3f777a;
-  --on-aqua:   #ffffff;
-  --quote-text:#142523;
-  --ember:     #a4532f;
-  --line-strong: rgba(20,37,35,0.24);
-  --surface-wash: rgba(20,37,35,0.035);
-  --nav-scrolled: rgba(245,245,240,0.84);
+  --on-aqua:   #06181a;
+  --quote-text:#eaf6f7;
+  --ember:     #d98a5b;
+  --line-strong: rgba(255,255,255,0.16);
+  --surface-wash: rgba(255,255,255,0.02);
+  --nav-scrolled: rgba(7,9,10,0.78);
 
   --maxw: 1200px;
   --maxw-wide: 1340px;
@@ -39,27 +39,27 @@
   --font-serif: "Newsreader", Georgia, serif;
 }
 
-/* Light is the default. A visitor's explicit dark choice is stored on <html>. */
-html[data-theme="dark"] {
-  --bg:        #07090a;
-  --bg-2:      #0a0e0f;
-  --panel:     #0d1213;
-  --card:      #0f1516;
-  --card-2:    #121a1b;
-  --line:      rgba(255,255,255,0.10);
-  --line-soft: rgba(255,255,255,0.06);
-  --line-strong: rgba(255,255,255,0.16);
-  --surface-wash: rgba(255,255,255,0.02);
-  --text:      #eceae3;
-  --dim:       #9aa3a2;
-  --faint:     #7d8887;
-  --aqua:      #84c2c6;
-  --aqua-br:   #a6dde0;
+/* Dark is the default. A visitor's explicit light choice is stored on <html>. */
+html[data-theme="light"] {
+  --bg:        #f5f5f0;
+  --bg-2:      #eaeeea;
+  --panel:     #ffffff;
+  --card:      #ffffff;
+  --card-2:    #f0f5f3;
+  --line:      rgba(20,37,35,0.16);
+  --line-soft: rgba(20,37,35,0.10);
+  --line-strong: rgba(20,37,35,0.24);
+  --surface-wash: rgba(20,37,35,0.035);
+  --text:      #142523;
+  --dim:       #48605d;
+  --faint:     #5f716e;
+  --aqua:      #267276;
+  --aqua-br:   #1d5c60;
   --aqua-deep: #3f777a;
-  --on-aqua:   #06181a;
-  --quote-text:#eaf6f7;
-  --ember:     #d98a5b;
-  --nav-scrolled: rgba(7,9,10,0.78);
+  --on-aqua:   #ffffff;
+  --quote-text:#142523;
+  --ember:     #a4532f;
+  --nav-scrolled: rgba(245,245,240,0.84);
 }
 
 * { box-sizing: border-box; }

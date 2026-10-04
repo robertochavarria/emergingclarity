@@ -18,7 +18,7 @@
     var themeMeta = document.querySelector('meta[name="theme-color"]');
     if (themeMeta) themeMeta.setAttribute("content", theme === "dark" ? "#07090a" : "#f5f5f0");
   }
-  applyTheme(savedTheme() === "dark" ? "dark" : "light");
+  applyTheme(savedTheme() === "light" ? "light" : "dark");
 
   var LINKS = [
     { href: "/about/",        id: "about",        label: "About Roberto" },
