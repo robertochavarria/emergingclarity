@@ -1,5 +1,7 @@
+node_modules/
+dist/
+.astro/
 .DS_Store
 .claude/
 *.zip
 __MACOSX/
-*.md

@@ -1,0 +1,199 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const props = {
+  "page": "connect",
+  "title": "Connect — Emerging Clarity",
+  "description": "Book a free first session with Roberto Chavarria — a relaxed one-hour conversation to experience the work for yourself.",
+  "canonical": "https://emergingclarity.com/connect/",
+  "ogType": "website",
+  "ogTitle": "Connect — Emerging Clarity",
+  "ogDescription": "Book a free first session with Roberto Chavarria.",
+  "ogImage": "https://emergingclarity.com/assets/og-image.jpg",
+  "twitterTitle": "Connect — Emerging Clarity",
+  "twitterDescription": "Book a free first session with Roberto Chavarria.",
+  "twitterImage": "https://emergingclarity.com/assets/og-image.jpg",
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the free first session?", "acceptedAnswer": { "@type": "Answer", "text": "A relaxed one-hour video call. We talk about where you are, what is bringing you here, and what you are hoping for — and we listen together for whether this work fits the threshold you are in. You will get a real taste of how I listen and reflect." } },
+      { "@type": "Question", "name": "Do I need to be in a crisis to come?", "acceptedAnswer": { "@type": "Answer", "text": "No. Some people arrive in the middle of an ending. Others have already made their leap and are building what comes next. Others simply feel a pull toward more clarity, depth, or momentum — and want structure and honest company for it. The free first session works the same in every case: we start with where you actually are." } },
+      { "@type": "Question", "name": "What does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "The first chapter is priced as a single package — one commitment for the whole chapter, rather than per session. I share the exact pricing in the free first session, once we have both had a chance to feel whether this is a fit. There is no expectation that you decide anything during the call." } },
+      { "@type": "Question", "name": "How does the work begin?", "acceptedAnswer": { "@type": "Answer", "text": "The work usually starts with a first chapter of ten one-on-one sessions, committed to as one whole. We usually begin weekly, then let the rhythm open up as the work deepens. Between sessions there are practices, experiments, and honest accountability — including voice-note access to me as things arise. When the chapter ends, we pause and reflect together on whether continuing serves you. Sessions are held online, worldwide." } },
+      { "@type": "Question", "name": "What happens after the first chapter?", "acceptedAnswer": { "@type": "Answer", "text": "We pause and reflect on what has changed, what remains alive, and whether continuing would serve you. For some people, ten sessions are the chapter they need. For others, the work continues across new decisions, relationships, responsibilities, and thresholds. There is no automatic renewal or expectation. We decide together, one chapter at a time." } },
+      { "@type": "Question", "name": "Is this therapy?", "acceptedAnswer": { "@type": "Answer", "text": "No. This is coaching and mentoring — not a substitute for clinical care. I do not diagnose or treat, and this work is not a replacement for your therapist, your faith, or your own discernment." } },
+      { "@type": "Question", "name": "Is what we talk about confidential?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. What you share with me stays between us." } },
+      { "@type": "Question", "name": "What happens after I write to you?", "acceptedAnswer": { "@type": "Answer", "text": "I will reply personally and we will find a time to talk. There is no obligation in reaching out — the call should help you hear something more clearly, whether or not we work together." } }
+    ]
+  },
+  "noscriptCss": ".reveal{opacity:1 !important;transform:none !important}"
+};
+---
+<BaseLayout {...props}>
+<main id="main">
+  <section class="pagehero" data-screen-label="Connect hero">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="wrap chero">
+      <div class="chero__text">
+        <div class="eyebrow reveal in">Connect</div>
+        <h1 class="reveal in" data-d="1">I&rsquo;d love to <span class="aqua">connect</span>.</h1>
+        <p class="lede reveal in" data-d="2">The first session is free. We&rsquo;ll spend time with whatever has brought you here and see where the conversation leads.</p>
+      </div>
+      <div class="chero__photo reveal in" data-d="2">
+        <picture>
+          <img src="assets/roberto-connect-2026.jpg" alt="Roberto Chavarria, ready to welcome you into conversation" width="1200" height="1800" loading="eager" decoding="async" fetchpriority="high" />
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--panel" id="book" style="padding-top:70px" data-screen-label="Book a session">
+    <div class="wrap">
+      <div class="cal-booking reveal">
+        <div class="cal-booking__head">
+          <div class="eyebrow center">Choose a time</div>
+          <h2>Book your free exploration session.</h2>
+          <p>Select a time that works for you. If you would rather begin by writing, the email option below is always available.</p>
+        </div>
+        <div class="cal-embed-shell">
+          <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-exploration-session">
+            <p class="cal-embed-fallback">Loading the calendar&hellip; <a href="https://cal.com/robertochavarria/exploration-session">Open the booking page directly</a>.</p>
+          </div>
+        </div>
+        <script type="text/javascript">
+          (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+          Cal("init", "exploration-session", {origin:"https://app.cal.com"});
+          Cal.config = Cal.config || {};
+          Cal.config.forwardQueryParams = true;
+          Cal.ns["exploration-session"]("inline", {
+            elementOrSelector:"#my-cal-inline-exploration-session",
+            config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+            calLink: "robertochavarria/exploration-session"
+          });
+          Cal.ns["exploration-session"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 30px" data-screen-label="Begin the conversation">
+    <div class="wrap">
+      <div class="connectcopy reveal">
+        <p style="font-size:21px; color:var(--text); line-height:1.5">If you would rather begin by writing, send me a note — as much or as little as you like — and I&rsquo;ll reply personally.</p>
+        <div class="step"><span class="n">1</span><span class="t">We get a feel for each other — no pressure, just listening for whether this is right.</span></div>
+        <div class="step"><span class="n">2</span><span class="t">I&rsquo;ll share exactly what to expect from our work, what it costs, and how to begin.</span></div>
+        <div class="step"><span class="n">3</span><span class="t">You leave with clarity on your next step — whether or not it&rsquo;s with me.</span></div>
+        <div class="actions">
+          <a class="btn btn--aqua" href="mailto:hello@emergingclarity.com?subject=Exploration%20call">Write me instead
+            <svg width="17" height="12" viewBox="0 0 18 12" fill="none"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <p class="after">I read every note myself, and I&rsquo;ll reply personally.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section section--panel" id="faq" style="scroll-margin-top: 100px" data-screen-label="FAQ">
+    <div class="wrap">
+      <div class="section__head center reveal" style="margin-bottom: 10px">
+        <div class="eyebrow center">Practical questions</div>
+        <h2 class="section__title" style="font-size:clamp(28px,3.4vw,44px)">The things worth knowing before you reach out.</h2>
+      </div>
+      <div class="faq reveal">
+        <div class="faq-item">
+          <div class="faq-q">What is the free first session?</div>
+          <p class="faq-a">A relaxed one-hour video call. We talk about where you are, what is bringing you here, and what you are hoping for — and we listen together for whether this work fits the threshold you are in. You will get a real taste of how I listen and reflect.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do I need to be in a crisis to come?</div>
+          <p class="faq-a">No. Some people arrive in the middle of an ending. Others have already made their leap and are building what comes next. Others simply feel a pull toward more clarity, depth, or momentum — and want structure and honest company for it. The free first session works the same in every case: we start with where you actually are.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What does it cost?</div>
+          <p class="faq-a">The first chapter is priced as a single package — one commitment for the whole chapter, rather than per session. I share the exact pricing in the free first session, once we have both had a chance to feel whether this is a fit. There is no expectation that you decide anything during the call.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How does the work begin?</div>
+          <p class="faq-a">The work usually starts with a first chapter of ten one-on-one sessions, committed to as one whole. We usually begin weekly, then let the rhythm open up as the work deepens. Between sessions there are practices, experiments, and honest accountability — including voice-note access to me as things arise. When the chapter ends, we pause and reflect together on whether continuing serves you. Sessions are held online, worldwide.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What happens after the first chapter?</div>
+          <p class="faq-a">We pause and reflect on what has changed, what remains alive, and whether continuing would serve you. For some people, ten sessions are the chapter they need. For others, the work continues across new decisions, relationships, responsibilities, and thresholds. There is no automatic renewal or expectation. We decide together, one chapter at a time.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is this therapy?</div>
+          <p class="faq-a">No. This is coaching and mentoring — not a substitute for clinical care. I do not diagnose or treat, and this work is not a replacement for your therapist, your faith, or your own discernment.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is what we talk about confidential?</div>
+          <p class="faq-a">Yes. What you share with me stays between us.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What happens after I write to you?</div>
+          <p class="faq-a">I will reply personally and we will find a time to talk. There is no obligation in reaching out — the call should help you hear something more clearly, whether or not we work together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script is:inline type="text/javascript">
+          (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+          Cal("init", "exploration-session", {origin:"https://app.cal.com"});
+          Cal.config = Cal.config || {};
+          Cal.config.forwardQueryParams = true;
+          Cal.ns["exploration-session"]("inline", {
+            elementOrSelector:"#my-cal-inline-exploration-session",
+            config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+            calLink: "robertochavarria/exploration-session"
+          });
+          Cal.ns["exploration-session"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        </script>
+</BaseLayout>
+<style is:global>
+.pagehero { padding: 168px 0 40px; position: relative; overflow: hidden; }
+  .pagehero .eyebrow { margin-bottom: 26px; }
+  .pagehero h1 { font-size: clamp(34px, 4.6vw, 64px); letter-spacing: -0.04em; }
+  .pagehero h1 .aqua { color: var(--aqua); }
+  .chero { display:grid; grid-template-columns: 1fr 360px; gap: 56px; align-items:center; position:relative; }
+  .chero .lede { margin-top: 24px; max-width: 40ch; }
+  .chero__photo img { width:100%; height:auto; display:block; border-radius: var(--radius-lg); box-shadow: inset 0 0 0 1px var(--line), 0 30px 70px -40px rgba(0,0,0,.7); }
+  @media (max-width: 860px){ .chero { grid-template-columns: 1fr; gap: 40px; } .chero__photo { max-width: 320px; } }
+
+  .connectcopy { max-width: 640px; margin: 0 auto; }
+  .connectcopy p { color: var(--dim); font-size: 18px; margin-bottom: 1.1em; }
+  .connectcopy .step { display:flex; gap:16px; padding: 16px 0; border-top:1px solid var(--line); }
+  .connectcopy .step:first-of-type { border-top:0; }
+  .connectcopy .step .n { color: var(--aqua); font-weight:800; font-size:15px; flex:none; width: 26px; }
+  .connectcopy .step .t { font-size: 16.5px; color: var(--text); }
+  .connectcopy .actions { display:flex; gap:14px; flex-wrap:wrap; margin-top: 30px; }
+  .connectcopy .after { color: var(--faint); font-size: 15px; margin: 18px 0 0; }
+
+  #book { scroll-margin-top: 82px; }
+  .cal-booking { max-width: 980px; margin: 0 auto; }
+  .cal-booking__head { max-width: 680px; margin: 0 auto 34px; text-align: center; }
+  .cal-booking__head h2 { font-size: clamp(30px, 4vw, 48px); margin-top: 18px; }
+  .cal-booking__head p { margin-top: 16px; color: var(--dim); font-size: 18px; }
+  .cal-embed-shell {
+    width: 100%;
+    height: min(780px, calc(100svh - 110px));
+    min-height: 660px;
+    overflow: hidden;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+  }
+  .cal-embed-fallback { padding: 28px; color: var(--dim); text-align: center; }
+  .cal-embed-fallback a { color: var(--aqua); text-decoration: underline; }
+  #my-cal-inline-exploration-session:has(iframe) > .cal-embed-fallback { display: none; }
+  @media (max-width: 600px) {
+    .cal-embed-shell { height: 720px; min-height: 720px; border-radius: var(--radius-md); }
+  }
+
+  /* FAQ — hairline-divided question/answer stack */
+  .faq { max-width: 720px; margin: 40px auto 0; border-top: 1px solid var(--line); }
+  .faq-item { padding: 26px 6px; border-bottom: 1px solid var(--line); }
+  .faq-q { font-weight: 700; font-size: clamp(18px, 1.8vw, 22px); letter-spacing: -0.02em; color: var(--text); margin-bottom: 10px; }
+  .faq-a { color: var(--dim); font-size: 16.5px; line-height: 1.6; margin: 0; }
+  .faq-a + .faq-a { margin-top: 0.8em; }
+</style>
